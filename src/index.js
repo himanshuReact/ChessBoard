@@ -8,11 +8,11 @@ import "./styles.css";
 // </div>
 // `;
 
-let chessBoard = document.getElementById("chessBoard");
-let boardSize = 4;
+let chessBoardContainer = document.getElementById("chessBoardContainer");
+let boardSize = 8;
 let buttonIncrease = document.createElement("button");
 buttonIncrease.innerHTML = "IncreaseSize";
-chessBoard.appendChild(buttonIncrease);
+chessBoardContainer.appendChild(buttonIncrease);
 buttonIncrease.className = "buttonIncrease";
 buttonIncrease.addEventListener("click", () => {
   alert("change size");
@@ -23,7 +23,7 @@ buttonIncrease.addEventListener("click", () => {
 
 let buttonDecrease = document.createElement("button");
 buttonDecrease.innerHTML = "DecreaseSize";
-chessBoard.appendChild(buttonDecrease);
+chessBoardContainer.appendChild(buttonDecrease);
 buttonDecrease.className = "buttonDecrease";
 buttonDecrease.addEventListener("click", () => {
   alert("change size");
@@ -32,9 +32,22 @@ buttonDecrease.addEventListener("click", () => {
   renderChessBoard();
 });
 
-const renderChessBoard = () => {
-  // let chessBoardContai = document.getElementById("chessBoard");
+let chessBoard = document.getElementById("chessBoard");
+chessBoard.addEventListener("mouseover", (event) => {
+  console.log("I am  mouse over");
+  // alert("change size");
+  // chessBoard.remove();
+  console.log(event.target);
+  event.target.classList.add("hoverBox");
 
+  // event.target.style.color = "blue";
+  // // reset the color after a short delay
+  // setTimeout(function () {
+  //   event.target.style.color = "";
+  // }, 500);
+});
+
+const renderChessBoard = () => {
   chessBoard.className = "chessBoard";
   for (let i = 0; i < boardSize; i++) {
     let chessRow = document.createElement("div");

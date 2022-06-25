@@ -2,11 +2,16 @@ body {
   font-family: sans-serif;
 }
 
-.chessBoard {
+.chessBoardContainer {
   height: 1450px;
   width: 1450px;
   padding: 40px;
   background-color: red;
+}
+.chessBoard {
+  background-color: orange;
+  height: 400px;
+  width: 400px;
 }
 
 .chessRow {
@@ -21,6 +26,13 @@ body {
   flex-direction: row;
   background-color: black;
 }
+/* .chessBox:hover {
+  background-color: yellow;
+} */
+
+.hoverBox {
+  background-color: green !important;
+}
 
 .whiteBox {
   background-color: white;
@@ -34,12 +46,13 @@ body {
 
 .buttonIncrease {
   /* position: absolute; */
-  /* position: fixed; */
+  position: relative;
   margin-top: 20px;
 }
 
 .buttonDecrease {
   /* position: absolute; */
   /* position: fixed; */
+  position: relative;
   margin-top: 10px;
 }
