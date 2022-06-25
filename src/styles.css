@@ -1,0 +1,45 @@
+body {
+  font-family: sans-serif;
+}
+
+.chessBoard {
+  height: 1450px;
+  width: 1450px;
+  padding: 40px;
+  background-color: red;
+}
+
+.chessRow {
+  display: flex;
+}
+
+.chessBox {
+  height: 50px;
+  width: 50px;
+  display: flex;
+
+  flex-direction: row;
+  background-color: black;
+}
+
+.whiteBox {
+  background-color: white;
+  border: 1px solid black;
+}
+
+.blackBox {
+  background-color: black;
+  border: 1px solid black;
+}
+
+.buttonIncrease {
+  /* position: absolute; */
+  /* position: fixed; */
+  margin-top: 20px;
+}
+
+.buttonDecrease {
+  /* position: absolute; */
+  /* position: fixed; */
+  margin-top: 10px;
+}
